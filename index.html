@@ -1,13 +1,27 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>Chineseyu.GitHub.io by chineseYU</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="lib/css/swiper-4.0.7.min.css">
     <link rel="stylesheet" type="text/css" href="lib/css/normalize.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css/index.css" media="screen">
+    <script type="text/javascript">
+      function IsPC(){
+        var userAgentInfo = navigator.userAgent;
+        var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+          if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
+        }
+        return flag;
+      }
+      if(IsPC()) {} else {
+        location.href = 'phone.html';
+      }
+    </script>
   </head>
   <body>
     <div id="container">
